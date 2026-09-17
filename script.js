@@ -51,8 +51,8 @@ function initScrollReveals() {
    2. REAL-TIME COUNTDOWN TIMER
    ========================================================================== */
 function initCountdown() {
-  // Target: Sunday, 22 November 2026, 5:30 PM (NZDT, UTC+13)
-  const targetDate = new Date('2026-11-22T17:30:00+13:00').getTime();
+  // Target: Sunday, 22 November 2026, 10:30 AM (NZDT, UTC+13)
+  const targetDate = new Date('2026-11-22T10:30:00+13:00').getTime();
 
   const daysEl = document.getElementById('cd-days');
   const hoursEl = document.getElementById('cd-hours');
@@ -229,15 +229,16 @@ function initCalendarEvent() {
   if (!btn) return;
 
   btn.addEventListener('click', () => {
-    const title = 'Kristian Joshua Emnas & Pich Hatha Van Wedding Reception';
+    const title = 'Kristian Joshua Emnas & Pich Hatha Van Wedding';
     const description = 
       'Wedding reception celebration of Kristian & Hatha.\n\n' +
-      'Reception: 5:30 PM (Please arrive by 5:00 PM) at Jolly Seafood Restaurant, 187 Wigram Road, Wigram, Christchurch.\n\n' +
+      'Ceremony: 11:00 AM (Please arrive by 10:30 AM) at 3 Kowhai Drive, Darfield, Canterbury.\n' +
+      'Reception: 5:30 PM at Jolly Seafood Restaurant, 187 Wigram Road, Wigram, Christchurch.\n\n' +
       'Dress code: Formal / Semi-Formal (Kindly avoid white and ivory).';
-    const location = 'Jolly Seafood Restaurant, 187 Wigram Road, Wigram, Christchurch, New Zealand';
+    const location = 'Christchurch & Darfield, Canterbury, New Zealand';
 
     // Dates in UTC: NZDT is UTC+13. 22 Nov 2026 5:30 PM = 22 Nov 2026 04:30 UTC
-    const startUtc = '20261122T043000Z';
+    const startUtc = '20261121T213000Z';
     const endUtc = '20261122T103000Z';
 
     const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startUtc}/${endUtc}&details=${encodeURIComponent(description)}&location=${encodeURIComponent(location)}`;
